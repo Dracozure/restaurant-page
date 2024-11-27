@@ -11,6 +11,8 @@ body {
     min-height: 100%;
 }
 
+/* Header & Nav */
+
 header {
     padding: 2rem;
     background-color: rgb(202, 202, 202);
@@ -27,4 +29,13 @@ nav {
 nav button {
     font-size: 1.4rem;
     padding: 3px 10px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-color: inherit;
+    transition: 150ms ease-in-out;
+}
+
+nav button:hover {
+    border-bottom: 3px solid black;
+
 }
