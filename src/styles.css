@@ -94,7 +94,6 @@ nav button:hover {
     padding: 10px 35px;
     justify-content: center;
     text-align: center;
-    user-select: none;
     font-size: 3rem;
     font-family: 'Avant_Garde';
     letter-spacing: 3px;
