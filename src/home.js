@@ -1,6 +1,6 @@
 import ramenBowlImg from './img/ramen-bowl.jpeg';
 
-(function() {
+export default function createHomePage() {
     const contentContainer = document.getElementById('content');
     const homeContent = document.createElement('div');
     const intro = document.createElement('div');
@@ -68,4 +68,4 @@ import ramenBowlImg from './img/ramen-bowl.jpeg';
             }
         }, 50);
     }
-})();
+};
