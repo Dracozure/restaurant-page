@@ -50,15 +50,18 @@ header {
 nav {
     display: flex;
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 nav button {
     font-size: 1.4rem;
     padding: 3px 10px;
-    border: 3px solid transparent;
+    height: fit-content;
+    border: none;
     border-radius: 5px;
     background-color: inherit;
-    transition: 150ms ease-in-out;
+    transition: 40ms ease-in-out;
 }
 
 nav button:hover {
