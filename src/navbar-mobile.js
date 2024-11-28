@@ -14,6 +14,7 @@
         const buttonHome = document.createElement('button');
         const buttonMenu = document.createElement('button');
         const buttonAbout = document.createElement('button');
+        const content = document.getElementById('content');
 
         buttonHome.textContent = 'Home';
         buttonMenu.textContent = 'Menu';
@@ -27,6 +28,7 @@
         if (type === 'desktop') {
             navBar.classList.add('desktop');
             header.appendChild(navBar);
+            content.classList.remove('hide');
         } else {   
             const headerContainer = document.querySelector('.header-container');
             const navContainerMobile = document.createElement('div');
@@ -35,7 +37,13 @@
             navButtonMobile.textContent = 'mobile';
 
             navButtonMobile.addEventListener('click', () => {
-                navContainerMobile.classList.add('active');
+                if (!navContainerMobile.classList.contains('active')) {
+                    navContainerMobile.classList.add('active');
+                    content.classList.add('hide');
+                } else {
+                    navContainerMobile.classList.remove('active');
+                    content.classList.remove('hide');
+                }
             });
 
             navBar.classList.add('mobile');
