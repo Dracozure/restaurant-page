@@ -40,6 +40,7 @@ header {
     width: 80%;
     justify-content: space-between;
     flex-wrap: wrap;
+    column-gap: 20px;
 }
 
 .header-title {
@@ -65,7 +66,7 @@ nav button {
 }
 
 nav button:hover {
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #000000;
 }
 
 /* Content */ 
@@ -90,7 +91,7 @@ nav button:hover {
     display: flex;
     flex-flow: column nowrap;
     gap: 20px;
-    padding: 10px;
+    padding: 10px 35px;
     justify-content: center;
     text-align: center;
     user-select: none;
