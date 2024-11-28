@@ -16,6 +16,11 @@ body {
     flex-flow: column nowrap;
 }
 
+@font-face {
+    font-family: 'Avant_Garde';
+    src: url(./fonts/Avant_Garde_Gothic.ttf);
+}
+
 /* Header & Nav */
 
 header {
@@ -50,6 +55,15 @@ nav button:hover {
 
 /* Home Content */
 
+.home-content {
+    display: flex;
+    height: 100%;
+    flex: auto;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
 .intro h1 {
     display: flex;
     flex-flow: column nowrap;
@@ -59,15 +73,9 @@ nav button:hover {
     text-align: center;
     user-select: none;
     font-size: 3rem;
-}
-
-.home-content {
-    display: flex;
-    height: 100%;
-    flex: auto;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+    font-family: 'Avant_Garde';
+    letter-spacing: 3px;
+    margin: 32px 0 10px 0;
 }
 
 .home-content img {
