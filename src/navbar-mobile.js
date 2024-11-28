@@ -32,6 +32,12 @@
             const navContainerMobile = document.createElement('div');
             const navButtonMobile = document.createElement('button');
 
+            navButtonMobile.textContent = 'mobile';
+
+            navButtonMobile.addEventListener('click', () => {
+                navContainerMobile.classList.add('active');
+            });
+
             navBar.classList.add('mobile');
             navContainerMobile.className = 'nav-container mobile';
             navButtonMobile.classList.add('nav-button');
