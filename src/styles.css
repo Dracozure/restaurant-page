@@ -50,6 +50,10 @@ nav button:hover {
 
 /* Home Content */
 
+.intro h1 {
+    user-select: none;
+}
+
 .home-content {
     display: flex;
     height: 100%;
@@ -60,5 +64,6 @@ nav button:hover {
 }
 
 .home-content img {
-    width: min(600px, 100%);
+    width: min(800px, 100%);
+    padding: 20px;
 }
