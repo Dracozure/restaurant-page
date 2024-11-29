@@ -6,7 +6,7 @@ export default function createMenuPage() {
 
     menuContainer.classList.add('menu-container');
 
-    const createMenuSection = (menuSectionTitle, itemBlocks) => {
+    const createMenuSection = (menuSectionTitle, itemsArr) => {
         const menuSection = document.createElement('div');
         const menuSectionTitleE = document.createElement('h2');
         const itemsContainer = document.createElement('div');
@@ -18,23 +18,11 @@ export default function createMenuPage() {
 
         menuSection.append(menuSectionTitleE, itemsContainer);
 
-        for (const itemBlock of itemBlocks) {
-            itemsContainer.appendChild(itemBlock);
+        for (const item of itemsArr) {
+            itemsContainer.appendChild(item);
         }
 
         return menuSection;
-    }
-
-    const createItemBlock = (items) => {
-        const itemBlock = document.createElement('div');
-
-        itemBlock.classList.add('block');
-
-        for (const item of items) {
-            itemBlock.appendChild(item);
-        }
-
-        return itemBlock;
     }
 
     const createItem = (name, price, description) => {
@@ -62,7 +50,6 @@ export default function createMenuPage() {
 
     for (const menuSection of jsonFile) {
         const itemsArr = [];
-        const blocksArr = [];
 
         for (const item of menuSection.menuItems) {
             const itemE = createItem(item.itemName, item.itemPrice, item.itemDescription);
@@ -70,16 +57,7 @@ export default function createMenuPage() {
             itemsArr.push(itemE);
         }
 
-        for (let i = 0; i < itemsArr.length; i += 3) {
-            const firstIndex = i;
-            const lastIndex = (i + 2) >= itemsArr.length ? length - 1 : i + 2;
-            const splicedItemsArr = itemsArr.slice().splice(firstIndex, lastIndex + 1);
-            const itemBlock = createItemBlock(splicedItemsArr);
-
-            blocksArr.push(itemBlock);
-        }
-
-        menuSectionArr.push(createMenuSection(menuSection.menuSectionTitle, blocksArr));
+        menuSectionArr.push(createMenuSection(menuSection.menuSectionTitle, itemsArr));
     }
 
     for (const menuSectionE of menuSectionArr) {
