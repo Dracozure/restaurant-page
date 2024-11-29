@@ -1,0 +1,72 @@
+[
+    {
+        "menuSectionTitle": "Appetizers",
+        "menuItems": [
+            {
+                "itemName": "Edamame",
+                "itemPrice": 4.75,
+                "itemDescription": "Tossed in sea salt and sesame seeds."
+            },
+            {
+                "itemName": "Vegetable Tempura",
+                "itemPrice": 6.95,
+                "itemDescription": "Assorted fresh vegetables fried in light tempura batter, with plum sauce."
+            },
+            {
+                "itemName": "Pan-Fried Chicken Potstickers",
+                "itemPrice": 8.95,
+                "itemDescription": "Wok-seared with basil and balsamic chile oil."
+            },
+            {
+                "itemName": "Agedashi Tofu",
+                "itemPrice": 5.99,
+                "itemDescription": "Fried tofu with broth."  
+            },
+            {
+                "itemName": "Mix Tempura",
+                "itemPrice": 5.99,
+                "itemDescription": "Shrimp and vegetables."  
+            },
+            {
+                "itemName": "Seaweed Salad",
+                "itemPrice": 5.99,
+                "itemDescription": "Tossed in special house sauce."  
+            }
+        ]
+    },
+    {
+        "menuSectionTitle": "Ramen",
+        "menuItems": [
+            {
+                "itemName": "Tonkotsu",
+                "itemPrice": 12.50,
+                "itemDescription": "Salt flavor, sliced pork, scallions, kikurage mushroom, and egg."
+            },
+            {
+                "itemName": "Tonkotsu Shoyu",
+                "itemPrice": 12.50,
+                "itemDescription": "Soy sauce flavor, sliced pork, scallions, kikurage mushroom, menma bamboo, egg."
+            },
+            {
+                "itemName": "Shio",
+                "itemPrice": 13.00,
+                "itemDescription": "Salt broth, green onions, chashu, nori aji tamago, menma, sesame, negi oil."
+            },
+            {
+                "itemName": "Miso",
+                "itemPrice": 13.00,
+                "itemDescription": "Miso broth, green onions, chashu, nori aji tamago, menma, sesame, butter."  
+            },
+            {
+                "itemName": "Black Garlic Miso",
+                "itemPrice": 14.00,
+                "itemDescription": "Miso broth, green onions, chashu, aji tamago, menma, garlic chips, nori sesame, black garlic oil."  
+            },
+            {
+                "itemName": "Chicken Shoyu",
+                "itemPrice": 12.50,
+                "itemDescription": "Chicken broth, sliced pork, scalions, menma bamboo, and egg."  
+            }
+        ]
+    }
+]
