@@ -73,7 +73,7 @@ export default function createMenuPage() {
         for (let i = 0; i < itemsArr.length; i += 3) {
             const firstIndex = i;
             const lastIndex = (i + 2) >= itemsArr.length ? length - 1 : i + 2;
-            const splicedItemsArr = itemsArr.splice(firstIndex, lastIndex + 1);
+            const splicedItemsArr = itemsArr.slice().splice(firstIndex, lastIndex + 1);
             const itemBlock = createItemBlock(splicedItemsArr);
 
             blocksArr.push(itemBlock);

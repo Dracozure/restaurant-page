@@ -210,6 +210,7 @@ nav.mobile button {
     justify-content: center;
     align-items: center;
     row-gap: 1.2rem;
+    height: 100%;
 }
 
 .item {
@@ -218,8 +219,7 @@ nav.mobile button {
     font-size: 1.15rem;
     flex: auto;
     row-gap: 30px;
-    max-width: 500px;
-    min-width: 320px;
+    width: 320px;
     font-family: 'Futura_Light';
     padding: 10px;
 }
@@ -234,6 +234,10 @@ nav.mobile button {
 .item-name {
     font-size: 1.5rem;
     font-family: 'Futura_Book';
+}
+
+.item-price {
+    padding-left: 15px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -251,5 +255,12 @@ nav.mobile button {
 
     .item {
         flex: auto;
+    }
+}
+
+
+@media screen and (max-width: 929px) {
+    .block {
+        max-height: fit-content;
     }
 }
