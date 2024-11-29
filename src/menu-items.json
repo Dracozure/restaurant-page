@@ -68,5 +68,50 @@
                 "itemDescription": "Chicken broth, sliced pork, scalions, menma bamboo, and egg."  
             }
         ]
+    },
+    {
+        "menuSectionTitle": "+Add-ons",
+        "menuItems": [
+            {
+                "itemName": "Extra Protein",
+                "itemPrice": 2.00,
+                "itemDescription": ""
+            },
+            {
+                "itemName": "Corn",
+                "itemPrice": 2.00,
+                "itemDescription": ""
+            },
+            {
+                "itemName": "Chashu Rice",
+                "itemPrice": 4.50,
+                "itemDescription": ""
+            }
+        ]
+    },
+    {
+        "menuSectionTitle": "Sake",
+        "menuItems": [
+            {
+                "itemName": "SAKE BOMB",
+                "itemPrice": 9.00,
+                "itemDescription": "Just try it."
+            },
+            {
+                "itemName": "Zipang Sparkling (250ml)",
+                "itemPrice": 16.00,
+                "itemDescription": "Sweet yet refreshingly light flavor, naturally carbonated."
+            },
+            {
+                "itemName": "Hana Awaka Sparkling (250ml)",
+                "itemPrice": 20.00,
+                "itemDescription": "Refreshing, fizzy, light, pleasant bubbly sake with mild sweetness and acidity."
+            },
+            {
+                "itemName": "Nigori Genshu (300ml)",
+                "itemPrice": 25.00,
+                "itemDescription": "Rich, creamy and boldly layered with dynamic flavors of coconut, anise, cream and earthy sweetness."
+            }
+        ]
     }
 ]
