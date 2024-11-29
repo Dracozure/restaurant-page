@@ -152,3 +152,28 @@ nav.mobile button {
         width: 95%;
     }
 }
+
+/* Menu Content */
+
+.menu-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 15rem;
+}
+
+.menu-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.block {
+    display: flex;
+    justify-content: space-around;
+}
