@@ -1,9 +1,12 @@
-export function createMenuPage() {    
+export default function createMenuPage() {    
+    const contentContainer = document.getElementById('content');
+    const menuContainer = document.createElement('div');
     const jsonFile = require('./menu-items.json');
+    const menuSectionArr = [];
 
-    console.log(jsonFile[0].menuItems);
+    menuContainer.classList.add('menu-container');
 
-    const createMenuSection = (menuSectionTitle, ...itemBlocks) => {
+    const createMenuSection = (menuSectionTitle, itemBlocks) => {
         const menuSection = document.createElement('div');
         const menuSectionTitleE = document.createElement('h2');
         const itemsContainer = document.createElement('div');
@@ -13,7 +16,7 @@ export function createMenuPage() {
 
         menuSectionTitleE.textContent = menuSectionTitle;
 
-        menuSection.append(menuSectionTitle, itemsContainer);
+        menuSection.append(menuSectionTitleE, itemsContainer);
 
         for (const itemBlock of itemBlocks) {
             itemsContainer.appendChild(itemBlock);
@@ -22,7 +25,7 @@ export function createMenuPage() {
         return menuSection;
     }
 
-    const createItemBlock = (...items) => {
+    const createItemBlock = (items) => {
         const itemBlock = document.createElement('div');
 
         itemBlock.classList.add('block');
@@ -56,4 +59,32 @@ export function createMenuPage() {
 
         return item;
     }
+
+    for (const menuSection of jsonFile) {
+        const itemsArr = [];
+        const blocksArr = [];
+
+        for (const item of menuSection.menuItems) {
+            const itemE = createItem(item.itemName, item.itemPrice, item.itemDescription);
+
+            itemsArr.push(itemE);
+        }
+
+        for (let i = 0; i < itemsArr.length; i += 3) {
+            const firstIndex = i;
+            const lastIndex = (i + 2) >= itemsArr.length ? length - 1 : i + 2;
+            const splicedItemsArr = itemsArr.splice(firstIndex, lastIndex + 1);
+            const itemBlock = createItemBlock(splicedItemsArr);
+
+            blocksArr.push(itemBlock);
+        }
+
+        menuSectionArr.push(createMenuSection(menuSection.menuSectionTitle, blocksArr));
+    }
+
+    for (const menuSectionE of menuSectionArr) {
+        menuContainer.appendChild(menuSectionE);
+    }
+
+    contentContainer.appendChild(menuContainer);
 };
