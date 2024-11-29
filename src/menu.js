@@ -3,6 +3,25 @@ export function createMenuPage() {
 
     console.log(jsonFile[0].menuItems);
 
+    const createMenuSection = (menuSectionTitle, ...itemBlocks) => {
+        const menuSection = document.createElement('div');
+        const menuSectionTitleE = document.createElement('h2');
+        const itemsContainer = document.createElement('div');
+
+        menuSection.classList.add('menu-section');
+        itemsContainer.classList.add('items-container');
+
+        menuSectionTitleE.textContent = menuSectionTitle;
+
+        menuSection.append(menuSectionTitle, itemsContainer);
+
+        for (const itemBlock of itemBlocks) {
+            itemsContainer.appendChild(itemBlock);
+        }
+
+        return menuSection;
+    }
+
     const createItemBlock = (...items) => {
         const itemBlock = document.createElement('div');
 
