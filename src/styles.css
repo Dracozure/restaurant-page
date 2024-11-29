@@ -36,6 +36,17 @@ body {
     src: url(./fonts/Futura\ Heavy\ font.ttf);
 }
 
+/* Content */ 
+
+#content {
+    display: flex;
+    flex: auto;
+}
+
+#content.hide {
+    opacity: 0;
+}
+
 /* Header & Nav */
 
 header {
@@ -114,16 +125,6 @@ nav.mobile {
 
 nav.mobile button {
     font-size: clamp(2rem, 8vw, 3.2rem);
-}
-
-/* Content */ 
-
-#content {
-    display: flex;
-}
-
-#content.hide {
-    opacity: 0;
 }
 
 /* Home Content */
