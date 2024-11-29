@@ -82,6 +82,7 @@ nav.desktop button:hover {
     position: absolute;
     transform: scale(0);
     transition: 200ms ease-in-out;
+    position: fixed;
 }
 
 .nav-container.mobile.active {
@@ -108,7 +109,7 @@ nav.mobile button {
 }
 
 #content.hide {
-    transform: scale(0);
+    opacity: 0;
 }
 
 /* Home Content */
