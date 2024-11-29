@@ -3,6 +3,18 @@ export function createMenuPage() {
 
     console.log(jsonFile[0].menuItems);
 
+    const createItemBlock = (...items) => {
+        const itemBlock = document.createElement('div');
+
+        itemBlock.classList.add('block');
+
+        for (const item of items) {
+            itemBlock.appendChild(item);
+        }
+
+        return itemBlock;
+    }
+
     const createItem = (name, price, description) => {
         const item = document.createElement('div');
         const itemHeader = document.createElement('div');
