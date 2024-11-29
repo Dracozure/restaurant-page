@@ -208,7 +208,6 @@ nav.mobile button {
     column-gap: 60px;
     width: 80%;
     justify-content: center;
-    align-items: center;
     row-gap: 1.2rem;
     height: 100%;
 }
@@ -222,6 +221,7 @@ nav.mobile button {
     width: 320px;
     font-family: 'Futura_Light';
     padding: 10px;
+    justify-content: space-between;
 }
 
 .item-header {
@@ -251,6 +251,7 @@ nav.mobile button {
         flex-flow: column nowrap;
         width: auto;
         flex: auto;
+        align-items: center;
     }
 
     .item {
