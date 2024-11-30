@@ -154,7 +154,7 @@ nav.mobile button {
     opacity: 0;
     transform: translateY(-20px);
     animation-fill-mode: forwards;
-    animation-delay: 350ms;
+    animation-delay: 300ms;
 }
 
 .home-content img {
