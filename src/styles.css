@@ -221,14 +221,11 @@ nav.mobile button {
     display: grid;
     gap: 3rem;
     grid-auto-rows: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(fit-content, 1fr));
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     max-width: 1400px;
     width: 80%;
     padding: 20px;
-}
-
-.items-container:has(> :nth-child(4)) {
-    grid-template-rows: repeat(2, 1fr);
 }
 
 .item {
