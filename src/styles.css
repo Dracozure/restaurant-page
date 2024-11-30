@@ -216,7 +216,7 @@ nav.mobile button {
     grid-template-rows: repeat(2, 1fr);
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    max-width: 1300px;
+    max-width: 1400px;
     width: 80%;
     padding: 20px;
 }
@@ -225,25 +225,35 @@ nav.mobile button {
     display: flex;
     flex-flow: column nowrap;
     font-size: 1.15rem;
-    row-gap: 30px;
+    row-gap: 4rem;
     font-family: 'Futura_Light';
     padding: 10px;
     justify-content: space-between;
-    min-width: 320px;
 }
 
 .item-header {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .item-name {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: 'Futura_Book';
 }
 
 .item-price {
-    padding-left: 15px;
+    font-size: 1.2rem;
+    transform: translateY(6px);
+    padding-left: 40px;
+}
+
+.item-description {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 490px) {
+    .items-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }

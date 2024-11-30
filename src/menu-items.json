@@ -70,26 +70,6 @@
         ]
     },
     {
-        "menuSectionTitle": "+Add-ons",
-        "menuItems": [
-            {
-                "itemName": "Extra Protein",
-                "itemPrice": 2.00,
-                "itemDescription": ""
-            },
-            {
-                "itemName": "Corn",
-                "itemPrice": 2.00,
-                "itemDescription": ""
-            },
-            {
-                "itemName": "Chashu Rice",
-                "itemPrice": 4.50,
-                "itemDescription": ""
-            }
-        ]
-    },
-    {
         "menuSectionTitle": "Sake",
         "menuItems": [
             {
@@ -111,6 +91,26 @@
                 "itemName": "Nigori Genshu (300ml)",
                 "itemPrice": 25.00,
                 "itemDescription": "Rich, creamy and boldly layered with dynamic flavors of coconut, anise, cream and earthy sweetness."
+            }
+        ]
+    },
+    {
+        "menuSectionTitle": "+Add-ons",
+        "menuItems": [
+            {
+                "itemName": "Extra Protein",
+                "itemPrice": 2.00,
+                "itemDescription": "1 extra serving."
+            },
+            {
+                "itemName": "Corn",
+                "itemPrice": 2.00,
+                "itemDescription": "1 small bowl on the side."
+            },
+            {
+                "itemName": "Chashu Rice",
+                "itemPrice": 4.50,
+                "itemDescription": "1 small bowl on the side."
             }
         ]
     }
