@@ -39,7 +39,7 @@ export default function createMenuPage() {
         itemDescription.classList.add('item-description');
 
         itemName.textContent = name;
-        itemPrice.textContent = price;
+        itemPrice.textContent = `$${price}`;
         itemDescription.textContent = description;
 
         item.append(itemHeader, itemDescription);
