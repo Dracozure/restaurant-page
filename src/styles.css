@@ -149,11 +149,28 @@ nav.mobile button {
     font-family: 'Avant_Garde';
     letter-spacing: 3px;
     margin: 32px 0 10px 0;
+    animation-name: intro-title;
+    animation-duration: 1200ms;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation-fill-mode: forwards;
+    animation-delay: 350ms;
 }
 
 .home-content img {
     width: min(650px, 100%);
     padding: 20px;
+}
+
+@keyframes intro-title {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1900px) {

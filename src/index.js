@@ -10,14 +10,19 @@ const contentElement = document.getElementById('content');
 
 homePage();
 
-homeButton.addEventListener('click', () => {
-    contentElement.firstChild.remove();
+const homeButtonListener = () => {
+    homeButton.addEventListener('click', () => {
+        contentElement.firstChild.remove();
+        homePage();
+    });
+}
 
-    homePage();
-});
+const menuButtonListener = () => {
+    menuButton.addEventListener('click', () => {
+        contentElement.firstChild.remove();
+        menuPage();
+    });
+};
 
-menuButton.addEventListener('click', () => {
-    contentElement.firstChild.remove();
-
-    menuPage();
-});
+homeButtonListener();
+menuButtonListener();
