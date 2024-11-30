@@ -6,6 +6,13 @@
     margin: 0;
 }
 
+:root {
+    --transform-y-def: translateY(-20px);
+    --animation-duration-def: 1200ms;
+    --animation-fill-mode-def: forwards;
+    --animation-delay-def: 300ms;
+}
+
 html {
     height: 100%;
 }
@@ -149,12 +156,12 @@ nav.mobile button {
     font-family: 'Avant_Garde';
     letter-spacing: 3px;
     margin: 32px 0 10px 0;
-    animation-name: intro-title;
-    animation-duration: 1200ms;
     opacity: 0;
-    transform: translateY(-20px);
-    animation-fill-mode: forwards;
-    animation-delay: 300ms;
+    transform: var(--transform-y-def);
+    animation-name: intro-title;
+    animation-duration: var(--animation-duration-def);
+    animation-fill-mode: var(--animation-fill-mode-def);
+    animation-delay: var(--animation-delay-def);
 }
 
 .home-content img {
