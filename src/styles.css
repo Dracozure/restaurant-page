@@ -10,7 +10,7 @@
     --transform-y-def: translateY(-20px);
     --animation-duration-def: 1200ms;
     --animation-fill-mode-def: forwards;
-    --animation-delay-def: 350ms;
+    --animation-delay-def: 400ms;
 }
 
 html {
@@ -263,4 +263,42 @@ nav.mobile button {
     .items-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
+}
+
+/* About Section */
+
+.about-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.about {
+    max-width: 70%;
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    row-gap: 2rem;
+}
+
+.about h1 {
+    font-size: 3.7rem;
+    font-family: 'Futura_Heavy';
+    letter-spacing: 5px;
+}
+
+.about p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    letter-spacing: 3px;
+    line-height: 2.1rem;
+    font-family: 'Futura_Light';
+}
+
+.locations {
+    flex: auto;
 }

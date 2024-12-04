@@ -8,8 +8,6 @@ const homeButton = document.querySelector('.home');
 const menuButton = document.querySelector('.menu');
 const contentElement = document.getElementById('content');
 
-homePage();
-
 const homeButtonListener = () => {
     homeButton.addEventListener('click', () => {
         contentElement.firstChild.remove();
@@ -23,6 +21,3 @@ const menuButtonListener = () => {
         menuPage();
     });
 };
-
-homeButtonListener();
-menuButtonListener();
