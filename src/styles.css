@@ -273,32 +273,46 @@ nav.mobile button {
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+    row-gap: 1.5rem;
+}
+
+.about-container h1 {
+    font-size: 3.3rem;
+    font-family: 'Futura_Heavy';
+    letter-spacing: 5px;
+    text-align: center;
 }
 
 .about {
     max-width: 70%;
-    flex: auto;
+    flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
-    row-gap: 2rem;
-}
-
-.about h1 {
-    font-size: 3.7rem;
-    font-family: 'Futura_Heavy';
-    letter-spacing: 5px;
 }
 
 .about p {
     font-size: 1.4rem;
     max-width: 900px;
     letter-spacing: 3px;
-    line-height: 2.1rem;
+    line-height: 1.8rem;
     font-family: 'Futura_Light';
 }
 
 .locations {
-    flex: auto;
+    flex: 5;
+    width: 100%;
+}
+
+.locations-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: min(80px, 7vw);
+}
+
+.locations-bar button {
+    font-size: clamp(30px, 3rem, 2.5vw);
+    padding: 0;
 }
