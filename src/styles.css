@@ -353,6 +353,7 @@ nav.mobile button {
     position: absolute;
     flex-wrap: wrap;
     overflow-y: hidden;
+    transition: 300ms ease-in-out;
 }
 
 .region > * {

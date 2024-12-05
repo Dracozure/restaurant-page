@@ -1,0 +1,59 @@
+[
+    {
+        "region": "us",
+        "locations": [
+            {
+                "locationName": "Sesame City",
+                "locationAddress": "123 Sesame St., Sesame City, SE, 12345",
+                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "locationPhone": "Phone: 123-456-7890",
+                "locationEmail": "Email: sesame_city.ramen@gmail.com"
+            },
+            {
+                "locationName": "Adventure City",
+                "locationAddress": "53 Adventure Rd., Adventure City, AD, 41235",
+                "locationHours": "Open Weekdays</br> Mon: 12:00 p.m. - 8 p.m.</br> Tues - Fri: 8 a.m. - 3 p.m.",
+                "locationPhone": "Phone: 183-482-8392",
+                "locationEmail": "Email: adventure_city.ramen@gmail.com"
+            }
+        ]
+    },
+    {
+        "region": "japan",
+        "locations": [
+            {
+                "locationName": "Sakura City",
+                "locationAddress": "52 Sakura Ln., Sakura City, SA, 85732",
+                "locationHours": "Open Weekends</br> 2 p.m. -  1 a.m.",
+                "locationPhone": "Phone: 758-293-1923",
+                "locationEmail": "Email: sakura_city.japan.ramen@yahoo.com"
+            }
+        ]
+    },
+    {
+        "region": "korea",
+        "locations": [
+            {
+                "locationName": "Samjang City",
+                "locationAddress": "1523 Seoul Dr., Samjang City, SM, 31234",
+                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "locationPhone": "Phone: 918-284-5829",
+                "locationEmail": "Email: samjang_city.korea.ramen@hotmail.com"
+            }, 
+            {
+                "locationName": "Soju City",
+                "locationAddress": "13 Tteok Cr., Soju City, SO, 39182",
+                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "locationPhone": "Phone: 845-291-9382",
+                "locationEmail": "Email: soju_city.korea.ramen@gmail.com" 
+            },
+            {
+                "locationName": "Kito City",
+                "locationAddress": "9 Tubbu Rd., Kito City, CT, 83927",
+                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "locationPhone": "Phone: 829-384-4819",
+                "locationEmail": "Email: kity_city.korea.ramen@gmail.com"
+            }
+        ]
+    }
+]
