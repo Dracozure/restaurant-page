@@ -284,12 +284,13 @@ nav.mobile button {
 }
 
 .about {
-    max-width: 70%;
+    max-width: 900px;
     flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column nowrap;
+    padding: 10px;
 }
 
 .about p {
