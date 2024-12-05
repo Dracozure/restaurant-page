@@ -1,18 +1,44 @@
 
 export default function createAboutPage() {
-    const aboutContainer = document.querySelector('.about-container');
+    const content = document.getElementById('content');
+    const aboutTopContainer = document.createElement('div');
     const regionsJsonFile = require('./locations.json');
-    const regionsTopParent = document.createElement('div');
-    const locationsTitle = document.createElement('h1');
-    const regionsContainer = createRegionsContainer(regionsJsonFile);
+    const regionParentContainer = createRegionParentContainer(regionsJsonFile);
+    const aboutParentContainer = createAboutIntro();
 
-    regionsTopParent.classList.add('regions');
+    aboutTopContainer.classList.add('about-container');
 
-    locationsTitle.textContent = 'Locations';
+    aboutTopContainer.append(aboutParentContainer, regionParentContainer);
+    content.appendChild(aboutTopContainer);
 
-    regionsTopParent.append(locationsTitle, regionsContainer);
+    function createRegionParentContainer(regionsJsonFile) {
+        const regionsTopParent = document.createElement('div');
+        const locationsTitle = document.createElement('h1');
+        const regionsContainer = createRegionsContainer(regionsJsonFile);
+    
+        regionsTopParent.classList.add('regions');
+    
+        locationsTitle.textContent = 'Locations';
+    
+        regionsTopParent.append(locationsTitle, regionsContainer);
 
-    aboutContainer.appendChild(regionsTopParent);
+        return regionsTopParent;
+    }
+
+    function createAboutIntro() {
+        const aboutContainer = document.createElement('div');
+        const aboutTitle = document.createElement('h1');
+        const aboutDescription = document.createElement('p');
+
+        aboutContainer.classList.add('about');
+
+        aboutTitle.textContent = 'The Place';
+        aboutDescription.textContent = "The place. It's where people can enjoy and relax. There is no need to rush. It can be your bedroom, library, or even on a bench. Here, it's a humble ramen shop. Our motto is simple: to provide customers a comfortable place to eat and enjoy after a hard day's work. Because at Matte, we want to remind you of home.";
+
+        aboutContainer.append(aboutTitle, aboutDescription);
+
+        return aboutContainer;
+    }
 
     function createRegionsContainer(regionsFile) {
         const regionsContainerElement = document.createElement('div');
