@@ -1,11 +1,17 @@
 
 export default function createAboutPage() {
     const regionsFile = require('./locations.json');
+    const regionsArr = [];
 
     for (let i = 0; i < regionsFile.length; i++) {
-        const activeElement = (i === 0) ? true : false;
+        const activeStatus = (i === 0) ? true : false;
+        const locationsArr = []
 
+        for (const location of regionsFile[i].locations) {
+            locationsArr.push(createLocationElement(location.city, location.address, location.hours, location.phone, location.email));
+        }
 
+        regionsArr.push(createRegionElement(regionsFile[i].region, locationsArr, activeStatus));
     }
 
     const createRegionElement = (region, locationsArr, activeStatus) => {
