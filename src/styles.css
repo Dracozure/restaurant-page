@@ -300,19 +300,72 @@ nav.mobile button {
     font-family: 'Futura_Light';
 }
 
-.locations {
+.regions {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     flex: 5;
-    width: 100%;
+    min-width: 100%;
 }
 
-.locations-bar {
+.regions-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: column nowrap;
+    flex: 1 0 auto;
+    width: min(450px, 100%);
+    padding: 10px;
+    aspect-ratio: 1;
+}
+
+.regions-bar {
+    display: flex;
     column-gap: min(80px, 7vw);
 }
 
-.locations-bar button {
-    font-size: clamp(30px, 3rem, 2.5vw);
-    padding: 0;
+.regions-bar button {
+    flex: auto;
+    font-size: clamp(30px, 2.3rem, 5vw);
+}
+
+.regions-info,
+.region {
+    height: 100%;
+    width: 100%;
+}
+
+.regions-info {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.region {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    flex-wrap: wrap;
+}
+
+.region > * {
+    flex: auto;
+}
+
+.region h3 {
+    font-size: 1.7rem;
+}
+
+.region p {
+    font-size: 1.3rem;
+}
+
+.region.japan {
+    transform: translateX(-100%);
+}
+
+.region.korea {
+    transform: translateX(100%);
+}
+
+.region.active {
+    position: relative;
 }
