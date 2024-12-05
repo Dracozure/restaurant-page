@@ -14,6 +14,18 @@ export default function createAboutPage() {
         regionsArr.push(createRegionElement(regionsFile[i].region, locationsArr, activeStatus));
     }
 
+    const createRegionContainerElement = (regionsArr) => {
+        const regionsContainerElement = document.createElement('div');
+
+        regionsContainerElement.classList.add('regions-info');
+
+        for (const region of regionsArr) {
+            regionsContainerElement.appendChild(region);
+        }
+
+        return regionsContainerElement;
+    }
+
     const createRegionElement = (region, locationsArr, activeStatus) => {
         const regionsElement = document.createElement('div');
 
