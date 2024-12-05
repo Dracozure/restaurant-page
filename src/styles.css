@@ -325,13 +325,14 @@ nav.mobile button {
 
 .regions-bar button {
     font-size: clamp(30px, 2.3rem, 5vw);
-    background-color: #ffffff;
+    background: transparent;
     border: none;
     font-family: 'Futura_Heavy';
+    transition: 70ms ease-in-out;
 }
 
 .regions-bar button:hover {
-    color: #ff0000;
+    color: #9b6767;
     cursor: pointer;
 }
 
