@@ -319,15 +319,19 @@ nav.mobile button {
 
 .regions-bar {
     display: flex;
-    column-gap: min(80px, 7vw);
+    justify-content: space-between;
 }
 
 .regions-bar button {
-    flex: auto;
     font-size: clamp(30px, 2.3rem, 5vw);
     background-color: #ffffff;
     border: none;
     font-family: 'Futura_Heavy';
+}
+
+.regions-bar button:hover {
+    color: #ff0000;
+    cursor: pointer;
 }
 
 .regions-info,
@@ -344,9 +348,9 @@ nav.mobile button {
 
 .region {
     display: flex;
-    align-items: center;
     position: absolute;
     flex-wrap: wrap;
+    overflow-y: hidden;
 }
 
 .region > * {
@@ -355,10 +359,12 @@ nav.mobile button {
 
 .region h3 {
     font-size: 1.7rem;
+    letter-spacing: 2px;
 }
 
 .region p {
     font-size: 1.3rem;
+    letter-spacing: 1px;
 }
 
 .region.japan {
