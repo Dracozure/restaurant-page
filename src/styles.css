@@ -314,7 +314,7 @@ nav.mobile button {
     flex: 1 0 auto;
     width: min(450px, 100%);
     padding: 10px;
-    aspect-ratio: 1;
+    row-gap: 2rem;
 }
 
 .regions-bar {
@@ -325,6 +325,9 @@ nav.mobile button {
 .regions-bar button {
     flex: auto;
     font-size: clamp(30px, 2.3rem, 5vw);
+    background-color: #ffffff;
+    border: none;
+    font-family: 'Futura_Heavy';
 }
 
 .regions-info,
@@ -368,4 +371,12 @@ nav.mobile button {
 
 .region.active {
     position: relative;
+}
+
+.location {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 7px;
+    margin: 2rem 0;
+    font-family: 'Futura_Light';
 }
