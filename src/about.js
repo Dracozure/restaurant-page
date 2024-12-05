@@ -8,6 +8,18 @@ export default function createAboutPage() {
 
     }
 
+    const createRegionElement = (region, locationsArr, activeStatus) => {
+        const regionsElement = document.createElement('div');
+
+        regionsElement.className = (activeStatus) ? `region ${region} active` : `region ${region}`;
+
+        for (const location of locationsArr) {
+            regionsElement.appendChild(location);
+        }
+
+        return regionsElement;
+    }
+
     const createLocationElement = (city, address, hours, phone, email) => {
         const locationElement = document.createElement('div');
         const cityElement = document.createElement('h3');
