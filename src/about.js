@@ -1,32 +1,49 @@
 
 export default function createAboutPage() {
-    const regionsFile = require('./locations.json');
-    const regionsContainerElement = document.createElement('div');
-    const regionsArr = [];
-    const regionsBarButtonsInfo = [];
+    const aboutContainer = document.querySelector('.about-container');
+    const regionsJsonFile = require('./locations.json');
+    const regionsTopParent = document.createElement('div');
+    const locationsTitle = document.createElement('h1');
+    const regionsContainer = createRegionsContainer(regionsJsonFile);
 
-    regionsContainerElement.classList.add('regions-container');
+    regionsTopParent.classList.add('regions');
 
-    for (let i = 0; i < regionsFile.length; i++) {
-        const activeStatus = (i === 0) ? true : false;
-        const locationsArr = []
+    locationsTitle.textContent = 'Locations';
 
-        for (const location of regionsFile[i].locations) {
-            locationsArr.push(createLocationElement(location.city, location.address, location.hours, location.phone, location.email));
+    regionsTopParent.append(locationsTitle, regionsContainer);
+
+    aboutContainer.appendChild(regionsTopParent);
+
+    function createRegionsContainer(regionsFile) {
+        const regionsContainerElement = document.createElement('div');
+        const regionsArr = [];
+        const regionsBarButtonsInfo = [];
+    
+        regionsContainerElement.classList.add('regions-container');
+    
+        for (let i = 0; i < regionsFile.length; i++) {
+            const activeStatus = (i === 0) ? true : false;
+            const locationsArr = []
+    
+            for (const location of regionsFile[i].locations) {
+                locationsArr.push(createLocationElement(location.city, location.address, location.hours, location.phone, location.email));
+            }
+    
+            regionsArr.push(createRegionElement(regionsFile[i].region, locationsArr, activeStatus));
+            regionsBarButtonsInfo.push({ 'region': regionsFile[i].region, 'dataIndex': regionsFile[i].dataIndex, 'regionName': regionsFile[i].regionName });
         }
+    
+        regionsContainerElement.append(createRegionsBarElement(regionsBarButtonsInfo), createRegionInfoElement(regionsArr));
 
-        regionsArr.push(createRegionElement(regionsFile[i].region, locationsArr, activeStatus));
-        regionsBarButtonsInfo.push({ 'region': regionsFile[i].region, 'dataIndex': regionsFile[i].dataIndex, 'regionName': regionsFile[i].regionName });
+        return regionsContainerElement;
     }
-
-    regionsContainerElement.append(createRegionsBarElement(regionsBarButtonsInfo), createRegionInfoElement(regionsArr));
 
     function createRegionsBarElement(regionsBarButtonsInfoArr) {
         const regionsBarElement = document.createElement('div');
 
         regionsBarElement.classList.add('regions-bar');
 
-        for (const region of regionsBarButtonsInfo) {
+        for (const region of regionsBarButtonsInfoArr) {
             const buttonElement = document.createElement('button');
             
             buttonElement.classList.add(region.region);

@@ -5,18 +5,18 @@
         "regionName": "U.S.",
         "locations": [
             {
-                "locationCity": "Sesame City",
-                "locationAddress": "123 Sesame St., Sesame City, SE, 12345",
-                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
-                "locationPhone": "Phone: 123-456-7890",
-                "locationEmail": "Email: sesame_city.ramen@gmail.com"
+                "city": "Sesame City",
+                "address": "123 Sesame St., Sesame City, SE, 12345",
+                "hours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "phone": "Phone: 123-456-7890",
+                "email": "Email: sesame_city.ramen@gmail.com"
             },
             {
-                "locationCity": "Adventure City",
-                "locationAddress": "53 Adventure Rd., Adventure City, AD, 41235",
-                "locationHours": "Open Weekdays</br> Mon: 12:00 p.m. - 8 p.m.</br> Tues - Fri: 8 a.m. - 3 p.m.",
-                "locationPhone": "Phone: 183-482-8392",
-                "locationEmail": "Email: adventure_city.ramen@gmail.com"
+                "city": "Adventure City",
+                "address": "53 Adventure Rd., Adventure City, AD, 41235",
+                "hours": "Open Weekdays</br> Mon: 12:00 p.m. - 8 p.m.</br> Tues - Fri: 8 a.m. - 3 p.m.",
+                "phone": "Phone: 183-482-8392",
+                "email": "Email: adventure_city.ramen@gmail.com"
             }
         ]
     },
@@ -26,11 +26,11 @@
         "regionName": "Japan",
         "locations": [
             {
-                "locationCity": "Sakura City",
-                "locationAddress": "52 Sakura Ln., Sakura City, SA, 85732",
-                "locationHours": "Open Weekends</br> 2 p.m. -  1 a.m.",
-                "locationPhone": "Phone: 758-293-1923",
-                "locationEmail": "Email: sakura_city.japan.ramen@yahoo.com"
+                "city": "Sakura City",
+                "address": "52 Sakura Ln., Sakura City, SA, 85732",
+                "hours": "Open Weekends</br> 2 p.m. -  1 a.m.",
+                "phone": "Phone: 758-293-1923",
+                "email": "Email: sakura_city.japan.ramen@yahoo.com"
             }
         ]
     },
@@ -40,25 +40,25 @@
         "regionName": "Korea",
         "locations": [
             {
-                "locationCity": "Samjang City",
-                "locationAddress": "1523 Seoul Dr., Samjang City, SM, 31234",
-                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
-                "locationPhone": "Phone: 918-284-5829",
-                "locationEmail": "Email: samjang_city.korea.ramen@hotmail.com"
+                "city": "Samjang City",
+                "address": "1523 Seoul Dr., Samjang City, SM, 31234",
+                "hours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "phone": "Phone: 918-284-5829",
+                "email": "Email: samjang_city.korea.ramen@hotmail.com"
             }, 
             {
-                "locationCity": "Soju City",
-                "locationAddress": "13 Tteok Cr., Soju City, SO, 39182",
-                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
-                "locationPhone": "Phone: 845-291-9382",
-                "locationEmail": "Email: soju_city.korea.ramen@gmail.com" 
+                "city": "Soju City",
+                "address": "13 Tteok Cr., Soju City, SO, 39182",
+                "hours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "phone": "Phone: 845-291-9382",
+                "email": "Email: soju_city.korea.ramen@gmail.com" 
             },
             {
-                "locationCity": "Kito City",
-                "locationAddress": "9 Tubbu Rd., Kito City, CT, 83927",
-                "locationHours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
-                "locationPhone": "Phone: 829-384-4819",
-                "locationEmail": "Email: kity_city.korea.ramen@gmail.com"
+                "city": "Kito City",
+                "address": "9 Tubbu Rd., Kito City, CT, 83927",
+                "hours": "Open Everyday</br> 12:00 p.m. - 8 p.m.",
+                "phone": "Phone: 829-384-4819",
+                "email": "Email: kity_city.korea.ramen@gmail.com"
             }
         ]
     }
