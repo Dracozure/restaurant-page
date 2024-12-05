@@ -389,3 +389,11 @@ nav.mobile button {
     margin: 2rem 0;
     font-family: 'Futura_Light';
 }
+
+.location > * {
+    white-space: pre;
+}
+
+.address {
+    text-wrap: wrap;
+}
