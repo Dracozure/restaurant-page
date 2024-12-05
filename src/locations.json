@@ -1,6 +1,6 @@
 [
     {
-        "data-index": 0,
+        "dataIndex": 0,
         "region": "us",
         "locations": [
             {
@@ -20,7 +20,7 @@
         ]
     },
     {
-        "data-index": -1,
+        "dataIndex": -1,
         "region": "japan",
         "locations": [
             {
@@ -33,7 +33,7 @@
         ]
     },
     {
-        "data-index": 1,
+        "dataIndex": 1,
         "region": "korea",
         "locations": [
             {

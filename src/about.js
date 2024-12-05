@@ -1,7 +1,11 @@
 
 export default function createAboutPage() {
     const regionsFile = require('./locations.json');
+    const regionsContainerElement = document.createElement('div');
     const regionsArr = [];
+    const regionsBarButtonsInfo = [];
+
+    regionsContainerElement.classList.add('regions-container');
 
     for (let i = 0; i < regionsFile.length; i++) {
         const activeStatus = (i === 0) ? true : false;
@@ -12,18 +16,19 @@ export default function createAboutPage() {
         }
 
         regionsArr.push(createRegionElement(regionsFile[i].region, locationsArr, activeStatus));
+        regionsBarButtonsInfo.push({ 'region': regionsFile[i].region, 'data-index': regionsFile[i].dataIndex });
     }
 
-    const createRegionContainerElement = (regionsArr) => {
-        const regionsContainerElement = document.createElement('div');
+    const createRegionInfoElement = (regionsArr) => {
+        const regionsInfoElement = document.createElement('div');
 
-        regionsContainerElement.classList.add('regions-info');
+        regionsInfoElement.classList.add('regions-info');
 
         for (const region of regionsArr) {
-            regionsContainerElement.appendChild(region);
+            regionsInfoElement.appendChild(region);
         }
 
-        return regionsContainerElement;
+        return regionsInfoElement;
     }
 
     const createRegionElement = (region, locationsArr, activeStatus) => {
