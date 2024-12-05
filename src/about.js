@@ -1,4 +1,39 @@
 
+export default function createAboutPage() {
+    const regionsFile = require('./locations.json');
+
+    for (let i = 0; i < regionsFile.length; i++) {
+        const activeElement = (i === 0) ? true : false;
+
+
+    }
+
+    const createLocationElement = (city, address, hours, phone, email) => {
+        const locationElement = document.createElement('div');
+        const cityElement = document.createElement('h3');
+        const addressElement = document.createElement('p');
+        const hoursElement = document.createElement('p');
+        const phoneElement = document.createElement('p');
+        const emailElement = document.createElement('p');
+
+        locationElement.classList.add('location');
+        addressElement.classList.add('address');
+        hoursElement.classList.add('hours');
+        phoneElement.classList.add('phone');
+        emailElement.classList.add('email');
+
+        cityElement.textContent = city;
+        addressElement.textContent = address;
+        hoursElement.textContent = hours;
+        phoneElement.textContent = phone;
+        emailElement.textContent = email;
+
+        locationElement.append(cityElement, addressElement, hoursElement, phoneElement, emailElement);
+
+        return locationElement;
+    }
+}
+
 const addLocationCycling = () => {
     const koreaButton = document.querySelector('button.korea');
     const japButton = document.querySelector('button.japan');
