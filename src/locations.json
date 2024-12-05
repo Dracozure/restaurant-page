@@ -2,6 +2,7 @@
     {
         "dataIndex": 0,
         "region": "us",
+        "regionName": "U.S.",
         "locations": [
             {
                 "locationCity": "Sesame City",
@@ -22,6 +23,7 @@
     {
         "dataIndex": -1,
         "region": "japan",
+        "regionName": "Japan",
         "locations": [
             {
                 "locationCity": "Sakura City",
@@ -35,6 +37,7 @@
     {
         "dataIndex": 1,
         "region": "korea",
+        "regionName": "Korea",
         "locations": [
             {
                 "locationCity": "Samjang City",
