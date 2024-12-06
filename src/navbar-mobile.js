@@ -46,6 +46,13 @@
                 }
             });
 
+            [buttonHome, buttonMenu, buttonAbout].forEach(button => {
+                button.addEventListener('click', () => {
+                    navContainerMobile.classList.remove('active');
+                    content.classList.remove('hide');
+                });
+            });
+
             navBar.classList.add('mobile');
             navContainerMobile.className = 'nav-container mobile';
             navButtonMobile.classList.add('nav-button');
