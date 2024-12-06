@@ -134,42 +134,33 @@ export default function createAboutPage() {
     }
 
     function addLocationCycling() {
-        const koreaButton = document.querySelector('button.korea');
-        const japButton = document.querySelector('button.japan');
-        const usButton = document.querySelector('button.us');
-        
-        const regionUs = document.querySelector('.region.us');
-        const regionKor = document.querySelector('.region.korea');
-        const regionJap = document.querySelector('.region.japan');
-        
-        [koreaButton, japButton, usButton].forEach(button => {
+        const regionButtonsArr = Array.from(document.querySelector('.regions-bar').childNodes);
+        const regionsArr = Array.from(document.querySelector('.regions-info').childNodes);
+
+        for (const button of regionButtonsArr) {
             button.addEventListener('click', () => {
                 const indexAdd = parseInt(button.dataset.index) * -1;
+                        
+                const currentActiveElement = document.querySelector('.active');
+                const newActiveElement = document.querySelector(`.region.${button.classList[0]}`);
     
                 if (indexAdd === 0) {
                     return;
                 }
-        
-                const currentActiveElement = document.querySelector('.active');
-                const newActiveElement = document.querySelector(`.region.${button.classList[0]}`);
-        
-                const koreaAdd = parseInt(koreaButton.dataset.index) + indexAdd;
-                const japAdd = parseInt(japButton.dataset.index) + indexAdd;
-                const usAdd = parseInt(usButton.dataset.index) + indexAdd;
-        
-                regionJap.style.transform = `translateX(${japAdd * 100}%)`;
-                regionKor.style.transform = `translateX(${koreaAdd * 100}%)`;
-                regionUs.style.transform = `translateX(${usAdd * 100}%)`;
-        
+
+                for (let i = 0; i < regionsArr.length; i++) {
+                    const regionAdd = parseInt(regionButtonsArr[i].dataset.index) + indexAdd;
+
+                    regionsArr[i].style.transform = `translateX(${regionAdd * 100}%)`;
+
+                    regionButtonsArr[i].dataset.index = regionAdd;
+                }
+
                 newActiveElement.classList.add('active');
                 currentActiveElement.classList.remove('active');
-        
-                koreaButton.dataset.index = koreaAdd;
-                japButton.dataset.index = japAdd;
-                usButton.dataset.index = usAdd;
             
                 window.scrollTo(0, document.body.scrollHeight);
             });
-        });
+        }
     }
 }
