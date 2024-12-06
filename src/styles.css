@@ -99,13 +99,13 @@ nav button {
     border: none;
     transition: 40ms ease-in-out;
     background-color: transparent;
+    cursor: pointer;
 }
 
-nav.desktop button:hover {
+nav.desktop button:hover,
+nav button.nav-select {
     border-bottom: 3px solid #000000;
 }
-
-/* Nav Mobile */
 
 .nav-container.mobile {
     display: flex;
@@ -144,6 +144,12 @@ nav.mobile {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
+}
+
+.nav-container.mobile.active button:active {
+    background-color: transparent;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* Home Content */

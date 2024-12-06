@@ -21,8 +21,10 @@
         buttonAbout.textContent = 'About';
 
         buttonHome.classList.add('home');
+        buttonHome.classList.add('nav-select');
         buttonMenu.classList.add('menu');
         buttonAbout.classList.add('about');
+
         navBar.append(buttonHome, buttonMenu, buttonAbout);
 
         if (type === 'desktop') {
@@ -47,9 +49,13 @@
             });
 
             [buttonHome, buttonMenu, buttonAbout].forEach(button => {
-                button.addEventListener('click', () => {
+                button.addEventListener('click', (e) => {
+                    const currentNavSelectButton = document.querySelector('button.nav-select');
+
                     navContainerMobile.classList.remove('active');
                     content.classList.remove('hide');
+                    currentNavSelectButton.classList.remove('nav-select');
+                    e.target.classList.add('nav-select');
                 });
             });
 
