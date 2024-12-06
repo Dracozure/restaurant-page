@@ -86,11 +86,16 @@ export default function createAboutPage() {
 
     function createRegionInfoElement(regionsArr) {
         const regionsInfoElement = document.createElement('div');
+        let regionDefaultTranslateXMultiplier = 0;
 
         regionsInfoElement.classList.add('regions-info');
 
         for (const region of regionsArr) {
+            region.style.transform = `translateX(${regionDefaultTranslateXMultiplier * 100}%)`;
+
             regionsInfoElement.appendChild(region);
+
+            regionDefaultTranslateXMultiplier++;
         }
 
         return regionsInfoElement;

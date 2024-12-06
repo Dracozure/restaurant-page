@@ -370,14 +370,6 @@ nav.mobile button {
     letter-spacing: 1px;
 }
 
-.region.japan {
-    transform: translateX(-100%);
-}
-
-.region.korea {
-    transform: translateX(100%);
-}
-
 .region.active {
     position: relative;
 }
