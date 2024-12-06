@@ -11,6 +11,8 @@ export default function createAboutPage() {
     aboutTopContainer.append(aboutParentContainer, regionParentContainer);
     content.appendChild(aboutTopContainer);
 
+    addLocationCycling();
+
     function createRegionParentContainer(regionsJsonFile) {
         const regionsTopParent = document.createElement('div');
         const locationsTitle = document.createElement('h1');

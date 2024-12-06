@@ -392,8 +392,5 @@ nav.mobile button {
 
 .location > * {
     white-space: pre;
-}
-
-.address {
     text-wrap: wrap;
 }

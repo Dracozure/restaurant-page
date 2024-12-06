@@ -21,7 +21,7 @@
         ]
     },
     {
-        "dataIndex": -1,
+        "dataIndex": 1,
         "region": "japan",
         "regionName": "Japan",
         "locations": [
@@ -35,7 +35,7 @@
         ]
     },
     {
-        "dataIndex": 1,
+        "dataIndex": 2,
         "region": "korea",
         "regionName": "Korea",
         "locations": [
