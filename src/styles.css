@@ -48,6 +48,7 @@ body {
 #content {
     display: flex;
     flex: auto;
+    z-index: 0;
 }
 
 #content.hide {
@@ -62,11 +63,10 @@ header {
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem;
-    background-color: rgb(202, 202, 202);
     font-family: 'Avant_Garde';
     letter-spacing: 10px;
     font-size: 1.5rem;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header-container {
@@ -96,12 +96,16 @@ nav button {
     padding: 1px 4px;
     height: fit-content;
     border: none;
-    background-color: inherit;
     transition: 40ms ease-in-out;
+    background-color: transparent;
 }
 
 nav.desktop button:hover {
     border-bottom: 3px solid #000000;
+}
+
+nav.mobile button:active {
+    background-color: red;
 }
 
 /* Nav Mobile */
@@ -121,7 +125,7 @@ nav.desktop button:hover {
 .nav-container.mobile.active {
     transform: scale(1);
     background-color: white;
-    z-index: 0;
+    z-index: 1;
 }
 
 nav.mobile {
