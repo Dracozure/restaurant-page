@@ -283,7 +283,16 @@ nav.mobile button {
     text-align: center;
 }
 
-.about {
+.regions,
+.about-container .about {
+    opacity: 0;
+    animation-name: intro-title;
+    animation-duration: var(--animation-duration-def);
+    animation-fill-mode: var(--animation-fill-mode-def);
+    animation-delay: 100ms;
+}
+
+.about-container .about {
     max-width: 900px;
     flex: auto;
     display: flex;
@@ -293,7 +302,7 @@ nav.mobile button {
     padding: 10px;
 }
 
-.about p {
+.about-container .about p {
     font-size: 1.4rem;
     max-width: 900px;
     letter-spacing: 3px;
@@ -328,7 +337,7 @@ nav.mobile button {
     border: none;
     font-family: 'Futura_Heavy';
     transition: 70ms ease-in-out;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #000000;
     position: relative;
 }
 
