@@ -285,7 +285,7 @@ nav.mobile button {
 
 .about {
     max-width: 900px;
-    flex: 4;
+    flex: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,7 +305,7 @@ nav.mobile button {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    flex: 5;
+    flex: auto;
     min-width: 100%;
 }
 
