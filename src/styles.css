@@ -49,6 +49,7 @@ body {
     display: flex;
     flex: auto;
     z-index: 0;
+    transition: 500ms ease-in-out;
 }
 
 #content.hide {
@@ -100,16 +101,8 @@ nav button {
     background-color: transparent;
 }
 
-nav.mobile button {
-    font-family: 'Avant_Garde';
-}
-
 nav.desktop button:hover {
     border-bottom: 3px solid #000000;
-}
-
-nav.mobile button:active {
-    background-color: red;
 }
 
 /* Nav Mobile */
@@ -121,15 +114,16 @@ nav.mobile button:active {
     width: 100%;
     height: 100%;
     position: absolute;
-    transform: scale(0);
-    transition: 200ms ease-in-out;
     position: fixed;
+    font-family: 'Avant_Garde';
+    background-color: white;
+    transition: opacity 500ms ease-in-out;
+    z-index: 1;
+    opacity: 0;
 }
 
 .nav-container.mobile.active {
-    transform: scale(1);
-    background-color: white;
-    z-index: 1;
+    opacity: 1;
 }
 
 nav.mobile {
@@ -138,8 +132,18 @@ nav.mobile {
     gap: 2rem;
 }
 
-nav.mobile button {
+.nav-container.mobile button {
     font-size: clamp(2rem, 8vw, 3.2rem);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 500ms ease-in-out;
+    pointer-events: none;
+}
+
+.nav-container.mobile.active button {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
 }
 
 /* Home Content */
