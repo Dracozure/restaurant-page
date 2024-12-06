@@ -100,6 +100,10 @@ nav button {
     background-color: transparent;
 }
 
+nav.mobile button {
+    font-family: 'Avant_Garde';
+}
+
 nav.desktop button:hover {
     border-bottom: 3px solid #000000;
 }
