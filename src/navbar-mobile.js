@@ -59,6 +59,11 @@
     const mediaQuery = window.matchMedia('screen and (max-width: 764px)');
     const mediaQuery2 = window.matchMedia('screen and (min-width: 764px)');
 
+    mediaQuery.addEventListener('change', swapNavBar);
+    mediaQuery2.addEventListener('change', swapNavBar2);
+
+    swapNavBar(mediaQuery);
+
     function swapNavBar(e) {
         if (e.matches) {
             removeNavBar('desktop');
@@ -72,7 +77,4 @@
             addNavBar('desktop');
         }
     }
-
-    mediaQuery.addEventListener('change', swapNavBar);
-    mediaQuery2.addEventListener('change', swapNavBar2);
 })();
