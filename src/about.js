@@ -71,12 +71,15 @@ export default function createAboutPage() {
 
         regionsBarElement.classList.add('regions-bar');
 
-        for (const region of regionsBarButtonsInfoArr) {
+        for (let i = 0; i < regionsBarButtonsInfoArr.length; i++) {
             const buttonElement = document.createElement('button');
+            const region = regionsBarButtonsInfoArr[i];
             
             buttonElement.classList.add(region.region);
             buttonElement.setAttribute('data-index', region.dataIndex);
             buttonElement.textContent = region.regionName;
+
+            if (i === 0) { buttonElement.classList.add('selected'); }
 
             regionsBarElement.appendChild(buttonElement);
         }
@@ -143,11 +146,13 @@ export default function createAboutPage() {
         const regionsArr = Array.from(document.querySelector('.regions-info').childNodes);
 
         for (const button of regionButtonsArr) {
-            button.addEventListener('click', () => {
+            button.addEventListener('click', (e) => {
                 const indexAdd = parseInt(button.dataset.index) * -1;
                         
                 const currentActiveElement = document.querySelector('.active');
                 const newActiveElement = document.querySelector(`.region.${button.classList[0]}`);
+                const currentActiveButton = document.querySelector('button.selected');
+                const newActiveButton = e.target;
     
                 if (indexAdd === 0) {
                     return;
@@ -163,6 +168,9 @@ export default function createAboutPage() {
 
                 newActiveElement.classList.add('active');
                 currentActiveElement.classList.remove('active');
+
+                currentActiveButton.classList.remove('selected');
+                newActiveButton.classList.add('selected');
             
                 window.scrollTo(0, document.body.scrollHeight);
             });
