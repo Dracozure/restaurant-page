@@ -312,8 +312,7 @@ nav.mobile button {
 .regions-container {
     display: flex;
     flex-flow: column nowrap;
-    flex: 1 0 auto;
-    width: min(450px, 100%);
+    max-width: 450px;
     padding: 10px;
     row-gap: 2rem;
 }
@@ -385,4 +384,5 @@ nav.mobile button {
 .location > * {
     white-space: pre;
     text-wrap: wrap;
+    overflow-wrap: anywhere;
 }
