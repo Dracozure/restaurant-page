@@ -38,15 +38,22 @@
             const navButtonMobileBox1 = document.createElement('button');
             const navButtonMobileBox2 = document.createElement('button');
 
+            navButtonMobileBox1.classList.add('bar-1');
+            navButtonMobileBox2.classList.add('bar-2')
+
             navButtonMobile.append(navButtonMobileBox1, navButtonMobileBox2);
 
             navButtonMobile.addEventListener('click', () => {
                 if (!navContainerMobile.classList.contains('active')) {
                     navContainerMobile.classList.add('active');
                     content.classList.add('hide');
+                    navButtonMobileBox1.classList.add('active');
+                    navButtonMobileBox2.classList.add('active');
                 } else {
                     navContainerMobile.classList.remove('active');
                     content.classList.remove('hide');
+                    navButtonMobileBox1.classList.remove('active');
+                    navButtonMobileBox2.classList.remove('active');
                 }
             });
 
@@ -54,6 +61,8 @@
                 button.addEventListener('click', () => {
                     navContainerMobile.classList.remove('active');
                     content.classList.remove('hide');
+                    navButtonMobileBox1.classList.remove('active');
+                    navButtonMobileBox2.classList.remove('active');
                 });
             });
 

@@ -110,14 +110,27 @@ nav button.nav-select {
 .nav-button {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    border: none;
+    height: fit-content;
+    row-gap: 12px;
+    align-self: center;
+    background-color: transparent;
 }
 
 .nav-button > * {
     border: 2px solid black;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 45px;
+    max-height: 1px;
     flex: auto;
+    transition: 300ms ease-in-out;
+}
+
+.bar-1.active {
+    transform: translatey(10px) rotate(225deg);
+}
+
+.bar-2.active {
+    transform: translatey(-5px) rotate(-225deg);
 }
 
 .nav-container.mobile {
