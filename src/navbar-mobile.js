@@ -51,13 +51,9 @@
             });
 
             [buttonHome, buttonMenu, buttonAbout].forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const currentNavSelectButton = document.querySelector('button.nav-select');
-
+                button.addEventListener('click', () => {
                     navContainerMobile.classList.remove('active');
                     content.classList.remove('hide');
-                    currentNavSelectButton.classList.remove('nav-select');
-                    e.target.classList.add('nav-select');
                 });
             });
 
