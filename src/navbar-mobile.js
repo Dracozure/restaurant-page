@@ -35,8 +35,10 @@
             const headerContainer = document.querySelector('.header-container');
             const navContainerMobile = document.createElement('div');
             const navButtonMobile = document.createElement('button');
+            const navButtonMobileBox1 = document.createElement('button');
+            const navButtonMobileBox2 = document.createElement('button');
 
-            navButtonMobile.textContent = 'mobile';
+            navButtonMobile.append(navButtonMobileBox1, navButtonMobileBox2);
 
             navButtonMobile.addEventListener('click', () => {
                 if (!navContainerMobile.classList.contains('active')) {

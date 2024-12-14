@@ -107,6 +107,19 @@ nav button.nav-select {
     border-bottom: 3px solid #000000;
 }
 
+.nav-button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.nav-button > * {
+    border: 2px solid black;
+    min-width: 20px;
+    min-height: 20px;
+    flex: auto;
+}
+
 .nav-container.mobile {
     display: flex;
     align-items: center;
@@ -144,12 +157,6 @@ nav.mobile {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
-}
-
-.nav-container.mobile.active button:active {
-    background-color: transparent;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
 }
 
 /* Home Content */
