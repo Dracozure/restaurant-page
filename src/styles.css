@@ -131,12 +131,12 @@ nav button.nav-select {
     font-family: 'Avant_Garde';
     background-color: white;
     transition: opacity 500ms ease-in-out;
-    z-index: 1;
     opacity: 0;
 }
 
 .nav-container.mobile.active {
     opacity: 1;
+    z-index: 1;
 }
 
 nav.mobile {
