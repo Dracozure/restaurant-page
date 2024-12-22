@@ -8,9 +8,9 @@
 
 :root {
     --transform-y-def: translateY(-20px);
-    --animation-duration-def: 1200ms;
+    --animation-duration-def: 1500ms;
     --animation-fill-mode-def: forwards;
-    --animation-delay-def: 400ms;
+    --animation-delay-def: 500ms;
 }
 
 html {
