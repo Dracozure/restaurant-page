@@ -171,8 +171,6 @@ export default function createAboutPage() {
 
                 currentActiveButton.classList.remove('selected');
                 newActiveButton.classList.add('selected');
-            
-                window.scrollTo(0, document.body.scrollHeight);
             });
         }
     }

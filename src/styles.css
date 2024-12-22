@@ -91,6 +91,10 @@ nav.desktop {
     justify-content: center;
 }
 
+button {
+    color: #000000;
+}
+
 nav button {
     font-size: 1.4rem;
     margin: 0 10px;
@@ -118,7 +122,7 @@ nav button.nav-select {
 }
 
 .nav-button > * {
-    border: 2px solid black;
+    border: 2px solid #000000;
     min-width: 45px;
     max-height: 1px;
     flex: auto;
@@ -142,7 +146,7 @@ nav button.nav-select {
     position: absolute;
     position: fixed;
     font-family: 'Avant_Garde';
-    background-color: white;
+    background-color: #ffffff;
     transition: opacity 500ms ease-in-out;
     opacity: 0;
 }
